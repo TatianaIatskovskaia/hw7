@@ -23,6 +23,5 @@ class College:
     def get_students_by_score(self):
         return list(self._students_by_score)
 
-    # TODO Homework include min_score and max_score
     def get_students_by_scores_between(self, min_score, max_score):
-        None
+        return [student.name for student in self._students_by_score.irange_key(min_score, max_score)]
